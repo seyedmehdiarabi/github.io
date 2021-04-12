@@ -2,17 +2,11 @@
 (function ($) {
     "use strict";
 
-//Begin - Window Load
     $(window).load(function () {
-
-
-        //==============___Page Loader___================
-
-        $('#page-loader').delay(300).fadeOut(400);
+        $('#page-loader').fadeOut(400);
         $('#loader-name').addClass('loader-left');
         $('#loader-job').addClass('loader-right');
         $('#loader-animation').addClass('loader-hide');
-
     });
 
 //Begin - Document Ready
@@ -31,16 +25,6 @@
             pagination: true,
             singleItem: true,
             navigationText: ["<span class='fa fa-chevron-left'></span>", "<span class='fa fa-chevron-right'></span>"],
-        });
-
-
-//==============_Map_================
-        $('.map').on('click', function () {
-            $('.map-overlay').hide();
-        });
-
-        $('.map').on('mouseleave', function () {
-            $('.map-overlay').show();
         });
 
 //==============_Lightbox_================
@@ -120,9 +104,9 @@
 //Mobile menu
         function mobileMenu() {
             var x = document.getElementById('myLinks');
-            if(x.classList.length === 0){
+            if (x.classList.length === 0) {
                 x.classList.add('open_drow');
-            }else {
+            } else {
                 x.classList.remove('open_drow');
             }
             // if ($(x).hasClass('open_drow')) {
