@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Seyed Mehdi Arabi | Web Designer and Developer</title>
-<!--    <base href="https://github.com/seyedmehdiarabi/seyedmehdiarabi.github.io/">-->
+    <!--    <base href="https://github.com/seyedmehdiarabi/seyedmehdiarabi.github.io/">-->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -44,16 +44,16 @@
         </div>
         <div class="mobile-menu-container">
             <div class="topnav">
-                <a href="#home" class="active">&nbsp</a>
+                <a class="active">&nbsp</a>
                 <ul id="myLinks">
-                    <li><a href="#page-resume" class="link-home">خانه</a></li>
-                    <li><a href="#page-resume" class="link-page">رزومه</a></li>
-                    <li><a href="#page-skills" class="link-page">مهارت ها</a></li>
-                    <li><a href="#page-portfolio" class="link-page">مدارک و گواهینامه ها</a></li>
-                    <li><a href="#page-blog" class="link-page">انگیزه نامه</a></li>
-                    <li><a href="#page-contact" class="link-page">ارتباط با من</a></li>
+                    <li><a onclick="scroll_item(0 , 0)" href="#page-resume" class="link-home">خانه</a></li>
+                    <li><a onclick="scroll_item(0 , 600)" href="#page-resume" class="link-page">رزومه</a></li>
+                    <li><a onclick="scroll_item(0 , 2080)" href="#page-skills" class="link-page">مهارت ها</a></li>
+                    <li><a onclick="scroll_item(0 , 2710)" href="#page-portfolio" class="link-page">مدارک و گواهینامه ها</a></li>
+                    <li><a onclick="scroll_item(0 , 6000)" href="#page-blog" class="link-page">انگیزه نامه</a></li>
+                    <li><a onclick="scroll_item(0 , 9100)" href="#page-contact" class="link-page">ارتباط با من</a></li>
                 </ul>
-                <a href="#" class="icon" id="mobile-btn">
+                <a class="icon" id="mobile-btn">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
@@ -639,6 +639,11 @@
 <script src="assets/js/cross-browser.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/persianumber.min.js"></script>
+<script>
+    function scroll_item(a , e){
+        window.scrollTo(a , e);
+    }
+</script>
 <script type="text/javascript">$(document).ready(function () {
     $('.persian').persiaNumber('fa');
 });</script>

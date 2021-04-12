@@ -1,9 +1,9 @@
 //Use Strict Mode
-(function($) {
+(function ($) {
     "use strict";
 
 //Begin - Window Load
-    $(window).load(function(){
+    $(window).load(function () {
 
 
         //==============___Page Loader___================
@@ -16,36 +16,36 @@
     });
 
 //Begin - Document Ready
-    $(document).ready(function(){
+    $(document).ready(function () {
 
 //==============___Page Loader___================
         $('#loading-wraper').fadeIn(300);
 
 //==============___Testimonials - owl Carousel___================
         $("#testimonial-carousel").owlCarousel({
-            navigation : false, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            responsiveRefreshRate : 200,
+            navigation: false, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            responsiveRefreshRate: 200,
             responsiveBaseWidth: window,
             pagination: true,
             singleItem: true,
-            navigationText: ["<span class='fa fa-chevron-left'></span>","<span class='fa fa-chevron-right'></span>"],
+            navigationText: ["<span class='fa fa-chevron-left'></span>", "<span class='fa fa-chevron-right'></span>"],
         });
 
 
 //==============_Map_================
-        $('.map').on('click', function(){
+        $('.map').on('click', function () {
             $('.map-overlay').hide();
         });
 
-        $('.map').on('mouseleave', function(){
+        $('.map').on('mouseleave', function () {
             $('.map-overlay').show();
         });
 
 //==============_Lightbox_================
 //Nivo Lightbox
-        $('a.nivobox').nivoLightbox({ effect: 'fade' });
+        $('a.nivobox').nivoLightbox({effect: 'fade'});
 
 
 //==============___Scrollbars___================
@@ -58,7 +58,7 @@
         var linkHome = 0;
         var linkPage = '';
 
-        function pageOn(){
+        function pageOn() {
             $('#main-menu').addClass('main-menu-pgactive main-menu-right');
             $('#section-home').addClass('section-vcardbody-pgactive');
             $('.profileActive').removeClass('profileActive');
@@ -66,7 +66,7 @@
             linkHome = 1;
         }
 
-        function pageOff(){
+        function pageOff() {
             $('.section-page-active').removeClass('section-page-active');
             $('#main-menu').removeClass('main-menu-pgactive main-menu-right');
             $('#section-home').removeClass('section-vcardbody-pgactive');
@@ -76,7 +76,7 @@
         }
 
 
-        $(".link-page").on('click', function(event){
+        $(".link-page").on('click', function (event) {
             event.preventDefault();
             $('.menuActive').removeClass('menuActive');
             $(this).addClass('menuActive');
@@ -87,13 +87,12 @@
         });
 
 
-        $(".link-home").on('click', function(event){
+        $(".link-home").on('click', function (event) {
             event.preventDefault();
 
             if (linkHome == 0) {
                 //pageOn();
-            }
-            else if (linkHome == 1) {
+            } else if (linkHome == 1) {
                 $('.menuActive').removeClass('menuActive');
                 $(this).addClass('menuActive');
                 pageOff();
@@ -102,7 +101,7 @@
 
 //==============___Blog - Ajax___================
 
-        $(".loadPost").on('click', function(event){
+        $(".loadPost").on('click', function (event) {
             event.preventDefault();
             //$("#postHere").html('loading...');
             $('.section-page-active').removeClass('section-page-active');
@@ -114,28 +113,32 @@
 //==============___Contact Form Validator and Ajax Sender___================
 
 //Modal for Contact Form
-        $('.modal-wrap').on('click', function(){
+        $('.modal-wrap').on('click', function () {
             $('.modal-wrap').fadeOut(300);
         });
 
 //Mobile menu
         function mobileMenu() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
+            var x = document.getElementById('myLinks');
+            if(x.classList.length === 0){
+                x.classList.add('open_drow');
+            }else {
+                x.classList.remove('open_drow');
             }
+            // if ($(x).hasClass('open_drow')) {
+            //     $(x).removeClass('open_drow')
+            // } else {
+            //     $(x).addClass('open_drow')
+            // }
         }
 
-        $('#mobile-btn').on('click', function(){
+        $('#mobile-btn').on('click', function () {
             mobileMenu();
         });
 
-        $('#myLinks a').on('click', function(){
+        $('#myLinks a').on('click', function () {
             mobileMenu();
         });
-
 
 
 //End - Document Ready
