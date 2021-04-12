@@ -1524,3 +1524,24 @@ span.see-more {
   display: inline-block;
   width: 1em;
 }
+.nivo-lightbox-theme-default .nivo-lightbox-nav {
+  top: 10%;
+  width: 8%;
+  height: 80%;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.5;
+}
+.nivo-lightbox-theme-default .nivo-lightbox-nav:hover {
+  opacity: 1;
+  background-color: rgba(0,0,0,0.5);
+}
+.nivo-lightbox-theme-default .nivo-lightbox-prev {
+  background-image: url(../img/prev.png);
+  border-radius: 0 3px 3px 0;
+}
+.nivo-lightbox-theme-default .nivo-lightbox-next {
+  background-image: url(../img/next.png);
+  border-radius: 3px 0 0 3px;
+}
