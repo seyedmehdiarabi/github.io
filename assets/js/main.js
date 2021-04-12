@@ -2,6 +2,13 @@
 (function ($) {
     "use strict";
 
+    $(window).load(function () {
+        $('#page-loader').fadeOut(400);
+        $('#loader-name').addClass('loader-left');
+        $('#loader-job').addClass('loader-right');
+        $('#loader-animation').addClass('loader-hide');
+    });
+
 //Begin - Document Ready
     $(document).ready(function () {
 
