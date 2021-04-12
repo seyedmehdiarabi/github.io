@@ -1,13 +1,4 @@
-/*
- * Nivo Lightbox Default Theme v1.0
- * http://dev7studios.com/nivo-lightbox
- *
- * Copyright 2013, Dev7studios
- * Free to use and abuse under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- */
- 
-.nivo-lightbox-theme-default.nivo-lightbox-overlay { 
+.nivo-lightbox-theme-default.nivo-lightbox-overlay {
 	background: #666;
 	background: rgba(0,0,0,0.6); 
 }
